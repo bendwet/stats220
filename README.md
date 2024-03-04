@@ -1,1 +1,1 @@
-# stats220
+# Repository for all Stats 220 related projects
