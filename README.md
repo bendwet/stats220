@@ -7,3 +7,5 @@
 3. Project 3
 4. Project 4
 5. Project 5
+
+Here us a [link]("https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg") to what the average stats 220 enjoyer looks like
