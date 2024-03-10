@@ -8,4 +8,4 @@
 4. Project 4
 5. Project 5
 
-Here is a [link](https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg) to what the average stats 220 enjoyer looks like
+Here is a [link](https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg) to what the average stats 220 enjoyer looks like and here is a [link](https://www.stat.auckland.ac.nz/~fergusson/stats220_S124/project1.php) to the project 1 info
