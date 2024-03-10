@@ -144,10 +144,15 @@ frame4 <- meme %>%
   image_extent("500x500")
 
 # frames vector
-frames <- c(frame1, frame2, frame3, frame4)
+frames <- c(frame1, frame2, frame3)
+morph_frames <- image_morph(c(frame3, frame4), frames=5)
+
+all_frames = c(frames, morph_frames)
+
 
 # create animation
-animation <- image_animate(frames, fps = 1)
+animation <- image_animate(all_frames, fps = 2)
+
 
 
 ```
@@ -157,7 +162,9 @@ Here is my gif ![](my_animation.gif)
 ## Creativity
 I used alot of css to make the web page more stylish and fun lookin. This
 included some animation that I made, such as hover animations on the text
-as well as the fonts.
+as well as the fonts. I aslo combined image morph and animate to make it so
+that final number count down in the gif morphs into my meme image instead
+of just showing the next frame right away.
 
 ## Learning reflection
 
