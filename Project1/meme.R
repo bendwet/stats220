@@ -7,12 +7,13 @@ average_hater <- image_read("images/hater.png") %>%
 # image 1 text
 hater_text <- image_blank(width = 500, 
                           height = 50, 
-                          color = "#FFFFFF") %>%
+                          color = "#FFFFFF",) %>%
   image_annotate(text = "Typical Stats 220 Hater",
                  color = "#000000",
                  size = 40,
                  font = "Arial",
-                 gravity = "center")
+                 gravity = "center") %>%
+  image_charcoal()
 
 
 # image 2
@@ -27,7 +28,8 @@ enjoyer_text <- image_blank(width = 500,
                  color = "#000000",
                  size = 40,
                  font = "Arial",
-                 gravity = "center")
+                 gravity = "center") %>%
+  image_charcoal()
 
 # black bar
 text_black_bar <- image_blank(width = 3,
@@ -81,9 +83,15 @@ frame4 <- meme %>%
   image_extent("500x500")
 
 # frames vector
-frames <- c(frame1, frame2, frame3, frame4)
+frames <- c(frame1, frame2, frame3)
+morph_frames <- image_morph(c(frame3, frame4), frames=5)
+
+all_frames = c(frames, morph_frames)
+
 
 # create animation
-animation <- image_animate(frames, fps = 1)
+animation <- image_animate(all_frames, fps = 2)
+
+animation
 
 image_write(animation, "my_animation.gif")

@@ -10,27 +10,154 @@ knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, error=FALSE)
 ```
 
 ```{css}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
+.title {
+  color: #800080;
+  background-clip: text;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* add a shadow on hover */
+}
+
+.subtitle {
+  font-family: 'Dancing Script', cursive;
+  transition: color 0.3s ease, transform 0.5s ease; 
+}
+
+.subtitle:hover {
+  color: #3366cc; /* change the color on hover */
+  transform: scale(1.1);
+}
+
+.subtitle:not(:hover) {
+  color: inherit;
+  transform: scale(1);
+}
 ```
 
 ## Project requirements
+I have used two different levels of headers, which are the title and then a
+short explanation of the repo. These used the # and ## respectively. I then
+used and un-ordered bullet point and then numbered (ordered) bullet points to 
+show some additional info about what will be included in the repo. I used both
+bold and italics in the text, I bolded the title and the 'Project Names' header
+and put the 'Stats 220' in italics. I also provided two links, 1 to and image
+and another to an external website, which is the project 1 info site.
+This is the [link](https://github.com/bendwet/stats220) to my github repo.
+Here is a screenshot of my project folder
 
+![](project1folder.png)
 
 ## My meme
-
+Inspo image
+![](inspo_meme.png)
 ```{r meme-code, eval=TRUE}
+library(magick)
 
+# image 1
+average_hater <- image_read("images/hater.png") %>%
+  image_scale(500)
+
+# image 1 text
+hater_text <- image_blank(width = 500, 
+                          height = 50, 
+                          color = "#FFFFFF",) %>%
+  image_annotate(text = "Typical Stats 220 Hater",
+                 color = "#000000",
+                 size = 40,
+                 font = "Arial",
+                 gravity = "center") %>%
+  image_charcoal()
+
+
+# image 2
+average_enjoyer <- image_read("images/chad.jpg") %>%
+  image_scale(500)
+
+# image 2 text
+enjoyer_text <- image_blank(width = 500, 
+                            height = 50, 
+                            color = "#FFFFFF") %>%
+  image_annotate(text = "Average Stats 220 Enjoyer",
+                 color = "#000000",
+                 size = 40,
+                 font = "Arial",
+                 gravity = "center") %>%
+  image_charcoal()
+
+# black bar
+text_black_bar <- image_blank(width = 3,
+                         height = 50,
+                         color = "#000000")
+image_black_bar <- image_blank(width = 3,
+                              height = 500,
+                              color = "#000000")
+
+# make the columns
+
+# text row
+text_vector <- c(hater_text, text_black_bar, enjoyer_text)
+top_row <- image_append(text_vector)
+
+# images row
+image_vector <- c(average_hater, image_black_bar, average_enjoyer)
+bottom_row <- image_append(image_vector)
+
+meme <- c(top_row, bottom_row) %>%
+  image_append(stack = TRUE)
+
+meme
 
 ```
 
 
 ```{r animation-code, eval=FALSE}
+# Gif part
+
+# numbers for the color squares text
+counts <- 1: 3 %>% as.character()
+
+green_square <- image_blank(color = 'green', width = 400, height = 400)
+orange_square <- image_blank(color = 'orange', width = 300, height = 300)
+red_square <- image_blank(color = 'red', width = 200, height = 200)
+
+frame1 <- red_square %>%
+  image_annotate(text = counts[3], size = 100, gravity = "center") %>%
+  image_scale(200) %>%
+  image_extent("500x500")
+
+frame2 <- orange_square %>%
+  image_annotate(text = counts[2], size = 100, gravity = "center") %>%
+  image_scale(300) %>%
+  image_extent("500x500")
+
+frame3 <- green_square %>%
+  image_annotate(text = counts[1], size = 100, gravity = "center") %>%
+  image_scale(400) %>%
+  image_extent("500x500")
+
+frame4 <- meme %>%
+  image_scale(500) %>%
+  image_extent("500x500")
+
+# frames vector
+frames <- c(frame1, frame2, frame3, frame4)
+
+# create animation
+animation <- image_animate(frames, fps = 1)
 
 
 ```
 
+Here is my gif ![](my_animation.gif)
+
 ## Creativity
-  
+I used alot of css to make the web page more stylish and fun lookin. This
+included some animation that I made, such as hover animations on the text
+as well as the fonts.
 
 ## Learning reflection
 
