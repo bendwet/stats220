@@ -29,13 +29,31 @@ knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, error=FALSE)
 
 .subtitle:hover {
   color: #3366cc; /* change the color on hover */
-  transform: scale(1.1);
 }
 
-.subtitle:not(:hover) {
-  color: inherit;
-  transform: scale(1);
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Roboto'
 }
+
+p:hover {
+  background-color: #dcdcdc;
+}
+
+h2 {
+  font-family: 'Montserrat'
+  color: #333;
+  border-bottom: 2px solid #800080; /* purple underline for headers */
+  padding-bottom: 5px;
+}
+
 ```
 
 ## Project requirements
@@ -47,7 +65,9 @@ bold and italics in the text, I bolded the title and the 'Project Names' header
 and put the 'Stats 220' in italics. I also provided two links, 1 to and image
 and another to an external website, which is the project 1 info site.
 This is the [link](https://github.com/bendwet/stats220) to my github repo.
-Here is a screenshot of my project folder
+Here is a screenshot of my project folder. NOTE: I did actually use the images
+folder in my project, as seen in the screenshot, though I added the images
+here just to show in the screenshot as well.
 
 ![](project1folder.png)
 
@@ -160,11 +180,30 @@ animation <- image_animate(all_frames, fps = 2)
 Here is my gif ![](my_animation.gif)
 
 ## Creativity
-I used alot of css to make the web page more stylish and fun lookin. This
+I used a lot of css to make the web page more stylish and fun looking. This
 included some animation that I made, such as hover animations on the text
-as well as the fonts. I aslo combined image morph and animate to make it so
-that final number count down in the gif morphs into my meme image instead
-of just showing the next frame right away.
+as well as the fonts. Another thing I added was the grey box borders around the
+text to break it up for the white background, which makes it easier to see
+where each area is. I also added the hover effect for aesthetic purposes as well
+as the underlines on headers, to once again break up the different areas of the
+text to make it clear where the specific area starts and previous one ends.
+I also combined image morph and animate to make it so that final number count 
+down in the gif morphs into my meme image instead of just showing the next frame
+right away. I also added the charcoal function to the text, as I quite liked how
+it gave it a sort of old pencil look, which was also a non required function
+that I found in the magick library. This is more than the required task asked us to do, 
+but I think it looks better this way. I also think I put a lot of effort into the 
+explanations and explained more than the simple requirements.
 
 ## Learning reflection
-
+I think an important idea I learned was how we can break something down into
+smaller concepts then put all these pieces together to create the finished thing.
+For example, the meme was broken down into text and images for the most part
+then for the gif, adding frames. Then in terms of technical ideas, I would say
+it would have to be learning R for the first time, as I already had some experience
+with markdown and html/css, so learning a new language is always a great experience.
+I am interested in exploring more how R can be used to manipulate and display data.
+We have only seen the basic of what it can do, so it would be nice to see just
+how far we can take R and what common use cases R is good for. It would be
+interesting to see how R can be used to transform raw data into usable data
+that we can then go onto plot of graphs, show on websites etc. 
