@@ -1,0 +1,36 @@
+---
+title: "Creating images with R"
+subtitle: "with a little bit of magick"
+author: "Benjamin de Wet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, error=FALSE)
+```
+
+```{css}
+
+```
+
+## Project requirements
+
+
+## My meme
+
+```{r meme-code, eval=TRUE}
+
+
+```
+
+
+```{r animation-code, eval=FALSE}
+
+
+```
+
+## Creativity
+  
+
+## Learning reflection
+
