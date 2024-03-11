@@ -72,7 +72,7 @@ here just to show in the screenshot as well.
 ![](project1folder.png)
 
 ## My meme
-Inspo image
+Inspo image - I have decided to change the images and text, as well as the text font
 ![](inspo_meme.png)
 ```{r meme-code, eval=TRUE}
 library(magick)
