@@ -14,23 +14,26 @@ knitr::opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, error=FALSE)
 
 .title {
   color: #800080;
-  background-clip: text;
-  transition: color 0.3s ease;
-}
-
-.title:hover {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* add a shadow on hover */
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-family: 'Dancing Script', cursive;
-  transition: color 0.3s ease, transform 0.5s ease; 
+  font-family: 'Dancing Script';
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.subtitle:hover {
-  color: #3366cc; /* change the color on hover */
+.author {
+  font-style: italic;
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #555;
 }
-
 
 p {
   font-size: 16px;
@@ -41,10 +44,6 @@ p {
   border-radius: 5px;
   margin-bottom: 15px;
   font-family: 'Roboto'
-}
-
-p:hover {
-  background-color: #dcdcdc;
 }
 
 h2 {
@@ -180,20 +179,19 @@ animation <- image_animate(all_frames, fps = 2)
 Here is my gif ![](my_animation.gif)
 
 ## Creativity
-I used a lot of css to make the web page more stylish and fun looking. This
-included some animation that I made, such as hover animations on the text
-as well as the fonts. Another thing I added was the grey box borders around the
+I used a lot of css to make the web page more stylish and fun looking. I added
+new fonts, and colors. Another thing I added was the grey box borders around the
 text to break it up for the white background, which makes it easier to see
-where each area is. I also added the hover effect for aesthetic purposes as well
-as the underlines on headers, to once again break up the different areas of the
-text to make it clear where the specific area starts and previous one ends.
-I also combined image morph and animate to make it so that final number count 
-down in the gif morphs into my meme image instead of just showing the next frame
-right away. I also added the charcoal function to the text, as I quite liked how
-it gave it a sort of old pencil look, which was also a non required function
-that I found in the magick library. This is more than the required task asked us to do, 
-but I think it looks better this way. I also think I put a lot of effort into the 
-explanations and explained more than the simple requirements.
+where each area is. I also added the underlines on headers, to once again break 
+up the different areas of the text to make it clear where the specific area 
+starts and previous one ends. I also combined image morph and animate to make it 
+so that final number count down in the gif morphs into my meme image instead of 
+just showing the next frame right away. I also added the charcoal function to 
+the text, as I quite liked how it gave it a sort of old pencil look, which was 
+also a non required function that I found in the magick library. This is more 
+than the required task asked us to do, but I think it looks better this way. 
+I also think I put a lot of effort into the explanations and explained more 
+than the simple requirements.
 
 ## Learning reflection
 I think an important idea I learned was how we can break something down into
