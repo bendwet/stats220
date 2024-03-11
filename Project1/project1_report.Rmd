@@ -78,7 +78,7 @@ Inspo image - I have decided to change the images and text, as well as the text 
 library(magick)
 
 # image 1
-average_hater <- image_read("images/hater.png") %>%
+average_hater <- image_read("hater.png") %>%
   image_scale(500)
 
 # image 1 text
@@ -94,7 +94,7 @@ hater_text <- image_blank(width = 500,
 
 
 # image 2
-average_enjoyer <- image_read("images/chad.jpg") %>%
+average_enjoyer <- image_read("chad.jpg") %>%
   image_scale(500)
 
 # image 2 text
